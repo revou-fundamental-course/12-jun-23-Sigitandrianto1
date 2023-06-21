@@ -9,17 +9,27 @@
 
     <script>
       function konversiSuhu() {
-      var celsius = parseFloat(document.getElementById("celsius").value);
-      var fahrenheit = (celsius * 9/5) + 32;
-      document.getElementById("result").innerHTML = fahrenheit.toFixed(2) + " Fahrenheit";
-    }
-    </script>
+        var celsius = parseFloat(document.getElementById("celsius").value);
+        var fahrenheit = (celsius * 9 / 5) + 32;
+        document.getElementById("result").innerHTML = fahrenheit.toFixed(2) + " Fahrenheit";
+      }
 
+      function resetForm() {
+        document.getElementById("celsius").value = "";
+        document.getElementById("result").innerHTML = ""; 
+      }
+
+      function reverseKonversiSuhu() {
+        var fahrenheit = parseFloat(document.getElementById("fahrenheit").value);
+        var celsius = (fahrenheit - 32) * 5 / 9;
+        document.getElementById("celsius").value = celsius.toFixed(2);
+        document.getElementById("result").innerHTML = ""; 
+      }
+    </script>
   </head>
   <body>
-
     <header>
-      <section id="navbar" >
+      <section id="navbar">
         <div class="navbar-container">
           <h1>KangUkur</h1>
         </div>
@@ -33,10 +43,8 @@
       </section>
     </header>
 
-
-
     <main>
-    <section id="Home" >
+      <section id="Home">
         <!-- card -->
         <div class="card">
           <div class="card-header">
@@ -44,36 +52,40 @@
           </div>
           <div class="card-body">
             <label for="celsius">Celsius</label>
-            <input type="number" name="" id="celsius" placeholder="°C"  />
+            <input type="number" name="" id="celsius" placeholder="°C" />
             <br>
-            <label class="hasil" for="re">Hasil</label>
+            <label for="fahrenheit">Fahrenheit</label>
+            <input type="number" name="" id="fahrenheit" placeholder="°F" />
+            <br>
+            <label class="hasil" for="re">Hasil Celsius</label>
             <span id="result" placeholder="°F"></span>
-         
-                <br>
+            <br>
             <div class="TombolKonfigurasi">
-            <button onclick="konversiSuhu()" >Konfersi</button>
-            <button>Reset</button>
-            <button>Reverse</button>
-        </div>
+              <button onclick="konversiSuhu()">Konfersi</button>
+              <button id="reset">Resett</button>
+              <button id="reverse">Reverse</button>
+            </div>
           </div>
         </div>
-        </section>
+      </section>
 
-        <article>
-          <section id="Tentang-Kami" >
-            <div class="content-description">
-            <h1 class="Title" >Selamat datang di <br> Kang Ukur</h1>
+      <article>
+        <section id="Tentang-Kami">
+          <div class="content-description">
+            <h1 class="Title">Selamat datang di <br> Kang Ukur</h1>
             <p>Jangan biarkan perhitungan suhu menjadi rumit. Dapatkan konversi suhu yang cepat, akurat, dan terpercaya dengan Kang Ukur. Segera kunjungi situs web kami dan nikmati kemudahan dalam mengubah satuan suhu Celcius menjadi Fahrenheit!</p>
             <button>Info Lebih Lanjut</button>
-            </div>
-            <div class="content-image">
-              <img src="img/temperature2.png" alt="Icone Suhu">
-            </div>
-          </section>
-        </article>
+          </div>
+          <div class="content-image">
+            <img src="img/temperature2.png" alt="Icone Suhu">
+          </div>
+        </section>
+      </article>
     </main>
 
-<!--  -->
-
+    <script>
+      document.getElementById("reset").addEventListener("click", resetForm);
+      document.getElementById("reverse").addEventListener("click", reverseKonversiSuhu);
+    </script>
   </body>
 </html>
