@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:ital,wght@0,300;0,500;0,800;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+body {
+   height: 100vh;
+   margin: 0%;
+   padding: 0%;
+   background-color: white;
+}
+
+/* navbar */
+header #navbar {
+   width: 100%;
+   height: 70px;
+   top: 0;
+   display: flex;
+   justify-content: space-around;
+   margin-inline: auto;
+   align-items: center;
+   position: fixed;
+   background-color: #4F709C;
+   z-index: 999;
+}
+
+
+/* navbar Container */
+header #navbar .navbar-container h1 {
+   font-family: 'Dancing Script', cursive;
+   font-size: 40px;
+   color: #ffffff;
+}
+
+header #navbar .navbar-list ul {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+}
+
+header #navbar .navbar-list ul li {
+   list-style-type: none;
+}
+
+header #navbar .navbar-list ul li a {
+   text-decoration: none;
+   font-size: 17px;
+   color: white;
+   font-weight: 400;
+   font-family: poppins;
+}
+
+
+
+header #navbar .navbar-list ul li a:hover {
+   color: #213555;
+}
+
+/* end navbar */
+
+
+/* card */
+main #Home {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(#ebccb6 50%, #4F709C 50%, #fff);
+}
+
+
+main #Home .card {
+   margin: 200px 10px;
+   background-color: #213555;
+   padding: 40px 200px;
+   font-family: 'Poppins', sans-serif;
+   border-radius: 20px 5px 20px 5px;
+   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.5);
+
+}
+
+
+main #Home .card .card-header h1 {
+   color: white;
+   font-style: italic;
+}
+
+main #Home .card .card-header h1 span {
+   color: #fdac72;
+}
+
+main #Home .card .card-body {
+   width: 100%;
+   margin: auto;
+   text-align: center;
+}
+
+main #Home .card .card-body label {
+   font-size: 35px;
+   color: white;
+   font-family: 'Dancing Script', cursive;
+   padding: 5px;
+}
+
+main #Home .card .card-body .hasil {
+   font-size: 35px;
+   color: white;
+   font-family: 'Dancing Script', cursive;
+   padding: 14px;
+}
+
+main #Home .card .card-body input[type="number"] {
+   width: 220px;
+   height: 27px;
+   font-size: 16px;
+   border-radius: 5px;
+   border: transparent;
+}
+
+   span {
+      color: white;
+   }
+
+main #Home .card .card-body .TombolKonfigurasi {
+   display: flex;
+   justify-content: center;
+   margin: auto;
+}
+
+main #Home .card .card-body .TombolKonfigurasi button {
+   font-size: 14px;
+   font-family: poppins;
+   padding: 4px 16px;
+   border-radius: 7px;
+   border: 2px solid transparent;
+   margin: 14px 6px;
+   cursor: pointer;
+}
+
+
+main #Home .card .card-body .TombolKonfigurasi button:hover {
+   background-color: #4F709C;
+   color: #fff;
+}
+
+main #Home .card .card-body .TombolKonfigurasi button:active {
+   background-color: transparent;
+   border: 2px solid #fff;
+   color: #fff;
+
+}
+
+/* end card */
+
+
+/* Tenteng Kami */
+article {
+   margin-top: 80px;
+   max-width: 1000px;
+   width: 100%;
+   margin-inline: auto;
+   padding: 16px 32px;
+   display: flex;
+   justify-content: center;
+   box-sizing: border-box;
+}
+
+/* Tenang Kami Description */
+article #Tentang-Kami {
+   display: flex;
+   justify-content: center;
+}
+
+article #Tentang-Kami .content-description {
+   flex: 1 1;
+   box-sizing: border-box;
+   margin-right: 20px;
+}
+
+article #Tentang-Kami .content-description .Title {
+   margin-top: -5px;
+   font-size: 50px;
+   text-transform: capitalize;
+   line-height: 50px;
+   font-family: poppins;
+   font-weight: 600;
+   color: #213555;
+}
+
+article #Tentang-Kami .content-description p {
+   width: 80%;
+   font-size: 24px;
+   font-family: poppins;
+   margin-top: -40px;
+   line-height: 30px;
+}
+
+
+article #Tentang-Kami .content-description button {
+   margin-top: -20px;
+   font-family: poppins;
+   font-size: 16px;
+   padding: 5px 25px;
+   border: 2px solid transparent;
+   background-color: #4F709C;
+   text-transform: capitalize;
+   color: #fff;
+}
+
+
+article #Tentang-Kami .content-description button:hover {
+   border: 2px solid #4F709C;
+   background-color: #ffffff;
+   color: #213555;
+}
+
+article #Tentang-Kami .content-description button:focus {
+   background-color: #213555;
+   color: #fff;
+}
+
+
+/* Image Tentang Kami  */
+article #Tentang-Kami .content-image {
+   display: flex;
+   box-sizing: border-box;
+   align-items: center;
+   justify-content: center;
+}
+
+article #Tentang-Kami .content-image img {
+   margin-top: -17px;
+   width: 260px;
+   animation: animation 5s ease infinite alternate;
+
+}
+
+@keyframes  animation {
+   0%{
+      transform: translateY(0px);
+   }
+   25%{
+      transform: translateY(10px);
+   }
+   50%{
+      transform: translateY(0px);
+   }
+   75%{
+      transform: translateY(10px);
+   }
+   100%{
+      transform: translateY(0px);
+   }
+
+}
+
+
+/* End Tenteng Kami */
+
+
+@media screen and (max-width:768px) {
+   header #navbar{
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+   }
+
+   main #Home{
+      text-align: center;
+
+   }
+
+   article #Tentang-Kami{
+      margin-top: -100px;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+   }
+
+   article #Tentang-Kami .content-description{
+      order: 3;
+      flex: 1;
+      text-align: center;
+      margin: auto;
+   }
+   
+   article #Tentang-Kami .content-description P{
+      width: 100%;
+   }
+
+   article #Tentang-Kami .content-image {
+      margin-bottom: 70px;
+   }
+
+
+
+}
